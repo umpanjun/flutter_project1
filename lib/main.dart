@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project1/Main2.dart';
+
+import 'package:product_layout/layout3_2.dart';
+import 'package:product_layout/layout4';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyStatfukWidgets(),
+      home: ProfileApp(),
     );
   }
 }
