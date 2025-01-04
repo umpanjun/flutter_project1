@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project1/Main2.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,27 +9,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Demo'),
-          backgroundColor: Colors.pink, // สีชมพูสำหรับ AppBar
-        ),
-        body: Container(
-          color: Colors.purple[100], // พื้นหลังสีม่วงอ่อน
-          child: Center(
-            child: Text(
-              'Hello',
-              style: TextStyle(fontSize: 20), // เพิ่มข้อความ "Hello" ตรงกลาง
+      home: MyStatfukWidgets(),
+    );
+  }
+}
+
+class MyStatelessWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        title: Align(
+          alignment: Alignment.center, // จัดข้อความชิดตรงกลาง
+          child: const Text(
+            'Demo App', // ข้อความใน AppBar
+            style: TextStyle(
+              fontSize: 20, // ขนาดตัวอักษร
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print('Floating button pressed');
-          },
-          backgroundColor: Colors.pink[200], // สีของปุ่มลอย
-          child: Icon(Icons.phone), // ไอคอนโทรศัพท์
+      ),
+      body: const Center(
+        child: Text(
+          'Hello, 630710664_Prompetch', // ข้อความใน Body
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
         ),
       ),
     );
